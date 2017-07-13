@@ -9,11 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var uiSecurity: UIView!
+    @IBOutlet weak var uiWeather: UIView!
+    @IBOutlet weak var uiScroll: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        uiScroll.contentSize = CGSize(width: self.view.frame.size.width, height: 600)
+//        uiScroll.setContentOffset(CGPoint(x: 0, y: max(uiScroll.contentSize.height - uiScroll.bounds.size.height, 0) ), animated: true)
     }
 
     override func didReceiveMemoryWarning() {
