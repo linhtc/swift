@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class FruitTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
@@ -52,23 +53,6 @@ class FruitsTableTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-//
-//        // Configure the cell...
-//
-//        return cell
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-//        
-////        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
-////        cell.textLabel?.text = fruits[indexPath.row]
-//        let fruitName = fruits[indexPath.row]
-//        cell.textLabel?.text = fruitName
-//        cell.detailTextLabel?.text = "Delicious!"
-//        cell.imageView?.image = UIImage(named: fruitName)
-//        
-//        return cell
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! FruitTableViewCell
 
         let fruitName = fruits[indexPath.row]
@@ -80,6 +64,23 @@ class FruitsTableTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section \(section)"
+    }
+    
+    //MARK: Navigation
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        // Configure the destination view controller only when the save button is pressed.
+//        guard let button = sender as? UIBarButtonItem, button === fruitImageView else {
+//            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+//            return
+//        }
+        os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
 
 }
