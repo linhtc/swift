@@ -22,10 +22,13 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
+    private var users = [User]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        perform(#selector(checkUserLogged), with: nil, afterDelay: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +41,6 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         scrollView.contentSize = CGSize(width: 1.0, height: stackView.frame.size.height)
         self.automaticallyAdjustsScrollViewInsets = false
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.167707, green: 0.157497, blue: 0.167455, alpha: 1.0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.167707, green: 0.157497, blue: 0.167455, alpha: 1.0)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.white
@@ -80,10 +82,6 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             print("uiControl");
             let listViewContainer = ListViewController()
             self.navigationController?.pushViewController(listViewContainer, animated: true)
-//            self.navigationController?.present(listViewContainer, animated: true, completion: nil)
-//            let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "ListContainerID") as! ListViewController
-//            let navController = UINavigationController(rootViewController: VC1)
-//            self.present(navController, animated:true, completion: nil)
         } else if sender.view == uiHealth{
             print("uiHealth");
         } else if sender.view == uiTree{
@@ -94,6 +92,18 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             print("uiMore");
         } else{
             print("Hi");
+        }
+    }
+    
+    func checkUserLogged() {
+//        LinhomesDB.instance.deleteUser(cphone: "0961095661")
+        if LinhomesDB.instance.checkUserLogged(){
+            print("Logged")
+        } else{
+            print("Navigation to Login")
+            let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "LoginContainerID") as! LoginViewController
+            let navController = UINavigationController(rootViewController: VC1)
+            self.present(navController, animated:true, completion: nil)
         }
     }
     

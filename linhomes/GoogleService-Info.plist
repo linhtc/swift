@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>310668197645-d12rdkvpcskj0m5ea36pftpct1qkrask.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.310668197645-d12rdkvpcskj0m5ea36pftpct1qkrask</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBA8BGijUv6RD0dcphr5xQUg5MV2GLPtNw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>310668197645</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.linhtek.linhomes</string>
+	<key>PROJECT_ID</key>
+	<string>linhomes-afa8a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>linhomes-afa8a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:310668197645:ios:53b788a06a8cd6cc</string>
+	<key>DATABASE_URL</key>
+	<string>https://linhomes-afa8a.firebaseio.com</string>
+</dict>
+</plist>
