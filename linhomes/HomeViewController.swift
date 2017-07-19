@@ -96,7 +96,10 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func checkUserLogged() {
-//        LinhomesDB.instance.deleteUser(cphone: "0961095661")
+//        var res = LinhomesDB.instance.deleteUser(cphone: "0961095660")
+//        print("Remove user -> \(res)")
+//        res = LinhomesDB.instance.deleteUser(cphone: "0961095661")
+//        print("Remove user -> \(res)")
         if LinhomesDB.instance.checkUserLogged(){
             print("Logged")
         } else{

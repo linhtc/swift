@@ -13,11 +13,16 @@ class LinhomesDB {
     static let instance = LinhomesDB()
     private let db: Connection?
     private let users = Table("users")
+    private let devices = Table("devices")
+    private let ip = Expression<String>("ip")
     private let phone = Expression<String>("phone")
     private let name = Expression<String?>("name")
     private let password = Expression<String>("address")
+    private let id = Expression<String>("id")
+    private let ssid = Expression<String>("ssid")
     private let status = Expression<Int64>("status")
     private let sync = Expression<Int64>("sync")
+    private let style = Expression<Int64>("style")
     
     private init() {
         let path = NSSearchPathForDirectoriesInDomains(
@@ -45,7 +50,44 @@ class LinhomesDB {
                 table.column(sync)
             })
         } catch {
-            print("Unable to create table")
+            print("Unable to create table users")
+        }
+        do {
+            try db!.run(devices.create(ifNotExists: true){ table in
+                table.column(id, primaryKey: true)
+                table.column(name)
+                table.column(ssid)
+                table.column(password)
+                table.column(ip)
+                table.column(style)
+                table.column(status)
+            })
+        } catch {
+            print("Unable to create table devices")
+        }
+    }
+    
+    func addDevice(cid: String, cname: String, cssid: String, cpassword: String) -> Int64? {
+        do {
+            let insert = devices.insert(self.id <- cid, name <- cname, ssid <- cssid, password <- cpassword, ip <- "", style <- 1, status <- 0)
+            let id = try db!.run(insert)
+            // Add print(insert.asSQL()) to see the executed query itself
+            return id
+        } catch {
+            print("Insert failed -> devices")
+            return -1
+        }
+    }
+    
+    func addDevice(newDevice: Device) -> Bool {
+        do {
+            let insert = devices.insert(self.id <- newDevice.id, name <- newDevice.name, ssid <- newDevice.ssid, password <- newDevice.password, ip <- newDevice.ip, style <- newDevice.style, status <- newDevice.status)
+            let id = try db!.run(insert)
+            // Add print(insert.asSQL()) to see the executed query itself
+            return id > 0 ? true : false
+        } catch {
+            print("Insert failed -> devices")
+            return false
         }
     }
     
@@ -56,7 +98,7 @@ class LinhomesDB {
             // Add print(insert.asSQL()) to see the executed query itself
             return id
         } catch {
-            print("Insert failed")
+            print("Insert failed -> users")
             return -1
         }
     }
@@ -68,7 +110,7 @@ class LinhomesDB {
             // Add print(insert.asSQL()) to see the executed query itself
             return id > 0 ? true : false
         } catch {
-            print("Insert failed")
+            print("Insert failed -> users")
             return false
         }
     }

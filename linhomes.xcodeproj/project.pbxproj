@@ -15,7 +15,9 @@
 		3542F47E1F15DAD30029068D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3542F47D1F15DAD30029068D /* Assets.xcassets */; };
 		3542F4811F15DAD30029068D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3542F47F1F15DAD30029068D /* LaunchScreen.storyboard */; };
 		3597B6B51F1DBB1D006EF8F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597B6B41F1DBB1D006EF8F1 /* User.swift */; };
+		35A8147C1F1EF980005B0032 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8147B1F1EF980005B0032 /* RegisterViewController.swift */; };
 		35EB48CB1F1DEB390061AA52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */; };
+		35EEAB4C1F1F628700C4DD3D /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EEAB4B1F1F628700C4DD3D /* Device.swift */; };
 		35F3CE781F1DBE220039AD37 /* LinhomesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */; };
 		35FA45EE1F161D710019A7E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA45ED1F161D710019A7E4 /* HomeViewController.swift */; };
 		79FD969BCC90F7992103F8C6 /* Pods_linhomes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D64ED1A39C317F060C9539B /* Pods_linhomes.framework */; };
@@ -32,7 +34,9 @@
 		3542F4801F15DAD30029068D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3542F4821F15DAD30029068D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3597B6B41F1DBB1D006EF8F1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		35A8147B1F1EF980005B0032 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35EEAB4B1F1F628700C4DD3D /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinhomesDB.swift; sourceTree = "<group>"; };
 		35FA45ED1F161D710019A7E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3C964DC596629BB813122053 /* Pods-linhomes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-linhomes.release.xcconfig"; path = "Pods/Target Support Files/Pods-linhomes/Pods-linhomes.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				3597B6B41F1DBB1D006EF8F1 /* User.swift */,
 				35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */,
 				35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */,
+				35A8147B1F1EF980005B0032 /* RegisterViewController.swift */,
+				35EEAB4B1F1F628700C4DD3D /* Device.swift */,
 			);
 			path = linhomes;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 				35EB48CB1F1DEB390061AA52 /* LoginViewController.swift in Sources */,
 				3542F4771F15DAD30029068D /* AppDelegate.swift in Sources */,
 				35FA45EE1F161D710019A7E4 /* HomeViewController.swift in Sources */,
+				35EEAB4C1F1F628700C4DD3D /* Device.swift in Sources */,
+				35A8147C1F1EF980005B0032 /* RegisterViewController.swift in Sources */,
 				3597B6B51F1DBB1D006EF8F1 /* User.swift in Sources */,
 				3502EB241F1CC2F900CAFF15 /* ListViewController.swift in Sources */,
 				35F3CE781F1DBE220039AD37 /* LinhomesDB.swift in Sources */,

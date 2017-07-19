@@ -350,6 +350,114 @@
             </objects>
             <point key="canvasLocation" x="3660" y="-81.409295352323838"/>
         </scene>
+        <!--Register View Controller-->
+        <scene sceneID="LxI-K0-1Us">
+            <objects>
+                <viewController storyboardIdentifier="RegisterContainerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PHG-tf-uNO" customClass="RegisterViewController" customModule="linhomes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmr-Kn-G5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="IF1-1G-pWD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0gx-ui-Lhb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t15-XZ-A89">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logos" translatesAutoresizingMaskIntoConstraints="NO" id="zO0-7z-rki">
+                                        <rect key="frame" x="135" y="100" width="105" height="42"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyp-ob-sHM">
+                                        <rect key="frame" x="32" y="192" width="311" height="30"/>
+                                        <color key="textColor" red="0.08235294118" green="0.074509803920000006" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-91-VZL">
+                                        <rect key="frame" x="32" y="272" width="311" height="30"/>
+                                        <color key="textColor" red="0.12549019610000001" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-ez-9EQ">
+                                        <rect key="frame" x="32" y="352" width="311" height="30"/>
+                                        <color key="textColor" red="0.12549019610000001" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repassword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-1D-pnl">
+                                        <rect key="frame" x="32" y="432" width="311" height="30"/>
+                                        <color key="textColor" red="0.12549019610000001" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-Bc-vaS">
+                                        <rect key="frame" x="32" y="512" width="311" height="34"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Đăng ký">
+                                            <color key="titleColor" red="0.92156862750000001" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="gjY-8Z-rSV" eventType="touchUpInside" id="Q6a-xt-kMD"/>
+                                            <action selector="register:" destination="PHG-tf-uNO" eventType="touchUpInside" id="Xno-2l-6T7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pma-iQ-4dY">
+                                        <rect key="frame" x="125.5" y="556" width="124" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Quay lại đăng nhập">
+                                            <color key="titleColor" red="0.92156862750000001" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="PHG-tf-uNO" eventType="touchUpInside" id="7ox-x8-5K0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zO0-7z-rki" firstAttribute="leading" secondItem="t15-XZ-A89" secondAttribute="leading" constant="135" id="CWf-gn-zwS"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="leading" secondItem="cbw-1D-pnl" secondAttribute="leading" id="FHA-fg-VCg"/>
+                                    <constraint firstItem="pma-iQ-4dY" firstAttribute="top" secondItem="5lB-Bc-vaS" secondAttribute="bottom" constant="10" id="Gs2-7Z-4y2"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="centerX" secondItem="pma-iQ-4dY" secondAttribute="centerX" id="I2o-8T-9AB"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="trailing" secondItem="AXo-91-VZL" secondAttribute="trailing" id="LZb-B9-lLn"/>
+                                    <constraint firstAttribute="trailing" secondItem="zO0-7z-rki" secondAttribute="trailing" constant="135" id="Mll-28-pgg"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="top" secondItem="zO0-7z-rki" secondAttribute="bottom" constant="50" id="OCe-Cb-uhU"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="trailing" secondItem="pLj-ez-9EQ" secondAttribute="trailing" id="QDj-S1-g6w"/>
+                                    <constraint firstItem="zO0-7z-rki" firstAttribute="top" secondItem="t15-XZ-A89" secondAttribute="top" constant="100" id="Ulf-ag-90V"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="trailing" secondItem="5lB-Bc-vaS" secondAttribute="trailing" id="WCT-Ej-p8J"/>
+                                    <constraint firstItem="AXo-91-VZL" firstAttribute="top" secondItem="gyp-ob-sHM" secondAttribute="bottom" constant="50" id="bF1-Do-76p"/>
+                                    <constraint firstItem="cbw-1D-pnl" firstAttribute="top" secondItem="pLj-ez-9EQ" secondAttribute="bottom" constant="50" id="dCU-Aq-WoL"/>
+                                    <constraint firstItem="5lB-Bc-vaS" firstAttribute="top" secondItem="cbw-1D-pnl" secondAttribute="bottom" constant="50" id="gtk-Zv-OUt"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="trailing" secondItem="cbw-1D-pnl" secondAttribute="trailing" id="irl-fc-vkp"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="leading" secondItem="pLj-ez-9EQ" secondAttribute="leading" id="isE-Oq-N3g"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="leading" secondItem="t15-XZ-A89" secondAttribute="leading" constant="32" id="jJ3-sD-eh9"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="leading" secondItem="5lB-Bc-vaS" secondAttribute="leading" id="n65-aE-0Mh"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="centerX" secondItem="zO0-7z-rki" secondAttribute="centerX" id="q4P-vJ-B08"/>
+                                    <constraint firstItem="gyp-ob-sHM" firstAttribute="leading" secondItem="AXo-91-VZL" secondAttribute="leading" id="qMD-lE-14r"/>
+                                    <constraint firstItem="pLj-ez-9EQ" firstAttribute="top" secondItem="AXo-91-VZL" secondAttribute="bottom" constant="50" id="uNQ-zB-gl1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12549019607843137" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t15-XZ-A89" secondAttribute="trailing" id="VRB-0M-Cti"/>
+                            <constraint firstItem="IF1-1G-pWD" firstAttribute="top" secondItem="t15-XZ-A89" secondAttribute="bottom" id="bGP-xH-moD"/>
+                            <constraint firstItem="t15-XZ-A89" firstAttribute="top" secondItem="0gx-ui-Lhb" secondAttribute="top" id="m1d-0a-GcO"/>
+                            <constraint firstItem="t15-XZ-A89" firstAttribute="leading" secondItem="0gx-ui-Lhb" secondAttribute="leading" id="mWa-P6-vgt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiTextName" destination="gyp-ob-sHM" id="zrW-gY-UH9"/>
+                        <outlet property="uiTextPassword" destination="pLj-ez-9EQ" id="AlM-Oj-pFp"/>
+                        <outlet property="uiTextPhone" destination="AXo-91-VZL" id="I8Z-1U-odw"/>
+                        <outlet property="uiTextRepassword" destination="cbw-1D-pnl" id="34M-Pl-Oxh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyy-iE-U6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2721" y="688"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="474-4I-7FN">
             <objects>
@@ -396,6 +504,9 @@
                                         <state key="normal" title="Đăng ký tài khoản">
                                             <color key="titleColor" red="0.92156862745098034" green="0.9137254901960784" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="register:" destination="gjY-8Z-rSV" eventType="touchUpInside" id="VPI-kp-vrD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
@@ -428,6 +539,7 @@
                     <connections>
                         <outlet property="uiTextPassword" destination="9Kc-7B-Qm6" id="Bwi-co-8GF"/>
                         <outlet property="uiTextPhone" destination="s6O-V9-jKJ" id="wcZ-Ie-hrb"/>
+                        <segue destination="PHG-tf-uNO" kind="show" identifier="RegisterIdentifier" id="JNu-Gt-ffh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFF-w7-rMp" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Hide navigation bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         // Delete user -> will be removed after
@@ -27,21 +27,23 @@ class LoginViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         
+        // get data from firebase
         ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             //            let value = snapshot.value as? NSDictionary
             //            let username = value?["username"] as? String ?? ""
             //            let user = User.init(username: username)
 //            print(value as Any)
-            print(snapshot.childrenCount) // I got the expected number of items
+//            print(snapshot.childrenCount) // I got the expected number of items
+            print("users -> \(snapshot.childrenCount)")
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
 //                print(rest.value as Any)
-                let item = rest.value as? NSDictionary
+                let item = rest.childSnapshot(forPath: "info").value as? NSDictionary
                 let name = item?["name"] as? String ?? ""
                 let phone = item?["phone"] as? String ?? ""
                 let password = item?["pw"] as? String ?? ""
-                let user = User.init(phone: phone, name: name, password: password, status: 0, sync: 1)
+                let user = User.init(phone: phone, name: name, password: password, status: 0, sync: 0)
                 user.display()
                 if !LinhomesDB.instance.checkUserExisted(cphone: phone){
                     let result = LinhomesDB.instance.addUser(newUser: user)
@@ -52,7 +54,8 @@ class LoginViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        
+        // remove all observers
+//        ref.removeAllObservers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,13 +68,15 @@ class LoginViewController: UIViewController {
 
     @IBAction func login(_ sender: UIButton) {
         // initital loading
-        let alert = UIAlertController(title: nil, message: "Authenticate...", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "Đang xác thực...", preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         loadingIndicator.startAnimating();
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
+        
+        // check logged after 3s
         perform(#selector(checkUserLogged), with: nil, afterDelay: 3)
         
         // perform login
@@ -87,6 +92,13 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func register(_ sender: UIButton) {
+        print("Navigation to Register")
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "RegisterContainerID") as! RegisterViewController
+        let navController = UINavigationController(rootViewController: VC1)
+        self.present(navController, animated:true, completion: nil)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
