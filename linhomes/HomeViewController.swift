@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import Firebase
 
 class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -102,6 +103,38 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
 //        print("Remove user -> \(res)")
         if LinhomesDB.instance.checkUserLogged(){
             print("Logged")
+            
+            let user = LinhomesDB.instance.getUserLogged()            
+            if !user.phone.isEmpty{
+                // Sync all users from Firebase
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                
+                // get data from firebase
+                ref.child("users/"+user.phone+"/devices").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let enumerator = snapshot.children
+                    while let rest = enumerator.nextObject() as? DataSnapshot {
+                        let key = rest.key
+                        let name = rest.childSnapshot(forPath: "cn").value as? String ?? ""
+                        let ssid = rest.childSnapshot(forPath: "ws").value as? String ?? ""
+                        let password = rest.childSnapshot(forPath: "wp").value as? String ?? ""
+                        let ip = rest.childSnapshot(forPath: "wi").value as? String ?? ""
+                        let style = rest.childSnapshot(forPath: "sty").value as? Int64 ?? 0
+                        let status = rest.childSnapshot(forPath: "sta").value as? Int64 ?? -1
+                        let device = Device.init(id: key, name: name, ssid: ssid, password: password, ip: ip, style: style, status: status)
+                        device.display()
+                        if !LinhomesDB.instance.checkDeviceExisted(cid: key){
+                            let result = LinhomesDB.instance.addDevice(newDevice: device)
+                            print("Insert device \(key) to db -> \(result)")
+                        } else{
+                            let result = LinhomesDB.instance.updateDevice(cid: key, newDevice: device)
+                            print("Update device \(key) to db -> \(result)")
+                        }
+                    }
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+            }
         } else{
             print("Navigation to Login")
             let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "LoginContainerID") as! LoginViewController

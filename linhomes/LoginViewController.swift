@@ -47,7 +47,10 @@ class LoginViewController: UIViewController {
                 user.display()
                 if !LinhomesDB.instance.checkUserExisted(cphone: phone){
                     let result = LinhomesDB.instance.addUser(newUser: user)
-                    print("Insert \(phone) to db -> \(result)")
+                    print("Insert user \(phone) to db -> \(result)")
+                } else{
+                    let result = LinhomesDB.instance.updateUser(cphone: phone, newUser: user)
+                    print("Update user \(phone) to db -> \(result)")
                 }
             }
             

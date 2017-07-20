@@ -34,16 +34,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cctv64" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-4R-olH">
-                                                                <rect key="frame" x="0.0" y="37" width="187" height="64.5"/>
+                                                                <rect key="frame" x="0.0" y="37" width="187" height="64"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An ninh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eC-ul-SkT">
-                                                                <rect key="frame" x="0.0" y="131.5" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="131" width="187" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.92156862745098034" green="0.9137254901960784" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 thiết bị" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm4-LT-xWe">
-                                                                <rect key="frame" x="0.0" y="160.5" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.4392156862745098" green="0.24313725490196078" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 thiết bị" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7U-JS-FC2">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -113,7 +113,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 thiết bị" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTj-jw-5Ia">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 thiết bị" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBu-5n-ntN">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -182,7 +182,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 thiết bị" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8t-Uh-uPn">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -214,7 +214,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 thiết bị" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-Tz-Jin">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -251,7 +251,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tài khoản" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUL-Fo-Nc3">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -283,7 +283,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tất cả dịch vụ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEs-eI-g8x">
-                                                                <rect key="frame" x="0.0" y="160" width="187" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="160" width="187" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.43921568630000002" green="0.24313725489999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -344,6 +344,7 @@
                         <outlet property="uiTree" destination="60l-WR-FCX" id="iks-84-2Yx"/>
                         <outlet property="uiWeather" destination="q9J-BR-HLD" id="QP5-qq-0q8"/>
                         <segue destination="gjY-8Z-rSV" kind="show" identifier="LoginIdentifier" id="cil-hC-tC1"/>
+                        <segue destination="vJk-VB-CCm" kind="show" identifier="ListIdentifier" id="RQh-in-D79"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYZ-c6-K96" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,7 +405,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pma-iQ-4dY">
-                                        <rect key="frame" x="125.5" y="556" width="124" height="29"/>
+                                        <rect key="frame" x="126" y="556" width="124" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Quay lại đăng nhập">
                                             <color key="titleColor" red="0.92156862750000001" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -546,46 +547,6 @@
             </objects>
             <point key="canvasLocation" x="3660" y="687.7061469265368"/>
         </scene>
-        <!--List View Controller-->
-        <scene sceneID="Uel-Os-we6">
-            <objects>
-                <tableViewController storyboardIdentifier="ListContainerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fWZ-Gi-dnE" customClass="ListViewController" customModule="linhomes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G7U-T0-Dy3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseIdentifier" textLabel="S7R-gQ-q3H" style="IBUITableViewCellStyleDefault" id="3eu-bZ-Esw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3eu-bZ-Esw" id="vUM-Ob-KBh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S7R-gQ-q3H">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fWZ-Gi-dnE" id="J1p-yQ-pcn"/>
-                            <outlet property="delegate" destination="fWZ-Gi-dnE" id="VlX-1o-K9C"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="7hf-5r-x3b">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="xHL-8h-zmg"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vv3-a7-Pgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4600.8000000000002" y="687.7061469265368"/>
-        </scene>
         <!--SCANNING-->
         <scene sceneID="4h9-5s-SVm">
             <objects>
@@ -599,11 +560,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yj7-aV-1kJ" id="lw8-sQ-vcS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="guo-1s-fYJ">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -630,6 +591,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPe-vz-plt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5420" y="-81"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="Neg-zL-EnL">
+            <objects>
+                <tableViewController id="vJk-VB-CCm" customClass="ListViewController" customModule="linhomes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dt9-4h-Edf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseIdentifier" textLabel="TZw-IZ-Urp" style="IBUITableViewCellStyleDefault" id="SMk-Y1-GJt">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SMk-Y1-GJt" id="3Kb-nF-Snw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TZw-IZ-Urp">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vJk-VB-CCm" id="spN-u4-Ige"/>
+                            <outlet property="delegate" destination="vJk-VB-CCm" id="eFv-bJ-uzj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6W9-eh-Pzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5420" y="688"/>
         </scene>
         <!--Item-->
         <scene sceneID="4Qr-MM-NuL">

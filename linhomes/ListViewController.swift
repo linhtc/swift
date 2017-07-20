@@ -8,16 +8,32 @@
 
 import UIKit
 
+class ListTableViewCell: UITableViewCell {
+    @IBOutlet weak var label: UILabel!
+}
+
 class ListViewController: UITableViewController {
 
+    var devices = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let devices = LinhomesDB.instance.getDevices()
+        for device in devices{
+            self.devices.append(device.name)
+        }
+        self.devices.append("111")
+        self.devices.append("111")
+        self.devices.append("111")
+        self.devices.append("111")
+        self.devices.append("111")
+        self.devices.append("111")
+        self.devices.append("111")
+        print("Number of devices -> \(self.devices.count)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,24 +45,31 @@ class ListViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return self.devices.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ReuseIdentifier")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseIdentifier", for: indexPath)
+//        print(self.devices[indexPath.row])
+        
+        let name = devices[indexPath.row]
+        cell.textLabel?.text = name
+        
         return cell
     }
+    
+    /*
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
     */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -82,14 +105,13 @@ class ListViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
     }
-    */
 
 }

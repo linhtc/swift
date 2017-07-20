@@ -91,6 +91,99 @@ class LinhomesDB {
         }
     }
     
+    func getDevices() -> [Device] {
+        var devices = [Device]()
+        do {
+            for device in try db!.prepare(self.devices) {
+                devices.append(Device(
+                    id: device[id],
+                    name: device[name]!,
+                    ssid: device[ssid],
+                    password: device[password],
+                    ip: device[ip],
+                    style: device[style],
+                    status: device[status]
+                    )
+                )
+            }
+        } catch {
+            print("Select failed -> devices")
+        }
+        
+        return devices
+    }
+    
+    func getDevice(cid: String) -> Device {
+        var devices = [Device]()
+        do {
+            for device in try db!.prepare(self.devices.filter(id == cid)) {
+                devices.append(Device(
+                    id: device[id],
+                    name: device[name]!,
+                    ssid: device[ssid],
+                    password: device[password],
+                    ip: device[ip],
+                    style: device[style],
+                    status: device[status]
+                    )
+                )
+            }
+        } catch {
+            print("getDevice failed")
+        }
+        if devices.count > 0{
+            return devices.first!
+        }
+        return Device(id: "");
+    }
+    
+    func checkDeviceExisted(cid: String) -> Bool {
+        var devices = [Device]()
+        do {
+            for device in try db!.prepare(self.devices.filter(id == cid)) {
+                devices.append(Device(id: device[id]))
+            }
+        } catch {
+            print("checkDeviceExisted failed")
+        }
+        return devices.count > 0 ? true : false
+    }
+    
+    func deleteDevice(cid: String) -> Bool {
+        do {
+            let device = devices.filter(id == cid)
+            try db!.run(device.delete())
+            return true
+        } catch {
+            print("Delete failed -> device")
+        }
+        return false
+    }
+    
+    func updateDevice(cid:String, newDevice: Device) -> Bool {
+        let device = devices.filter(id == cid)
+        do {
+            let update = device.update([
+                id <- newDevice.id,
+                name <- newDevice.name,
+                ssid <- newDevice.ssid,
+                password <- newDevice.password,
+                ip <- newDevice.ip,
+                style <- newDevice.style,
+                status <- newDevice.status
+            ])
+            if try db!.run(update) > 0 {
+                return true
+            }
+        } catch {
+            print("Update failed: \(error)")
+        }
+        
+        return false
+    }
+    
+    // ###########3333
+    
     func addUser(cphone: String, cname: String, cpassword: String) -> Int64? {
         do {
             let insert = users.insert(phone <- cphone, name <- cname, password <- cpassword, status <- 0, sync <- 0)
@@ -155,13 +248,13 @@ class LinhomesDB {
         if users.count > 0{
             return users.first!
         }
-        return User(phone: "0");
+        return User(phone: "");
     }
     
-    func checkUserExisted(cphone: String) -> Bool {
+    func getUserLogged() -> User {
         var users = [User]()
         do {
-            for user in try db!.prepare(self.users.filter(phone == cphone)) {
+            for user in try db!.prepare(self.users.filter(status == 1)) {
                 users.append(User(
                     phone: user[phone],
                     name: user[name]!,
@@ -172,7 +265,22 @@ class LinhomesDB {
                 )
             }
         } catch {
-            print("getUser failed")
+            print("getUserLogged failed")
+        }
+        if users.count > 0{
+            return users.first!
+        }
+        return User(phone: "");
+    }
+    
+    func checkUserExisted(cphone: String) -> Bool {
+        var users = [User]()
+        do {
+            for user in try db!.prepare(self.users.filter(phone == cphone)) {
+                users.append(User(phone: user[phone]))
+            }
+        } catch {
+            print("checkUserExisted failed")
         }
         return users.count > 0 ? true : false
     }
