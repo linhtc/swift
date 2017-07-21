@@ -42,12 +42,15 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         scrollView.contentSize = CGSize(width: 1.0, height: stackView.frame.size.height)
         self.automaticallyAdjustsScrollViewInsets = false
         
+        // custom navifation bar
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.167707, green: 0.157497, blue: 0.167455, alpha: 1.0)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
+        
+        // create event listenner for all services
         let tapSecurity = UITapGestureRecognizer(target: self, action: #selector(handleTapServices))
         let tapWeather = UITapGestureRecognizer(target: self, action: #selector(handleTapServices))
         let tapMedia = UITapGestureRecognizer(target: self, action: #selector(handleTapServices))
@@ -81,8 +84,13 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             print("uiMedia");
         } else if sender.view == uiControl{
             print("uiControl");
-            let listViewContainer = ListViewController()
-            self.navigationController?.pushViewController(listViewContainer, animated: true)
+//            let listViewContainer = ListTableViewController()
+//            self.navigationController?.pushViewController(listViewContainer, animated: true)
+            
+            let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "ListTableContainerID") as! ListTableViewController
+            let navController = UINavigationController(rootViewController: VC1)
+            self.present(navController, animated:true, completion: nil)
+
         } else if sender.view == uiHealth{
             print("uiHealth");
         } else if sender.view == uiTree{

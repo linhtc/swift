@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3502EB221F1C99EC00CAFF15 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502EB211F1C99EC00CAFF15 /* ScanViewController.swift */; };
-		3502EB241F1CC2F900CAFF15 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502EB231F1CC2F900CAFF15 /* ListViewController.swift */; };
 		353005581F1DFDA5008FC52D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353005571F1DFDA5008FC52D /* GoogleService-Info.plist */; };
 		3542F4771F15DAD30029068D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542F4761F15DAD30029068D /* AppDelegate.swift */; };
 		3542F47C1F15DAD30029068D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3542F47A1F15DAD30029068D /* Main.storyboard */; };
@@ -17,6 +16,8 @@
 		3597B6B51F1DBB1D006EF8F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597B6B41F1DBB1D006EF8F1 /* User.swift */; };
 		35A8147C1F1EF980005B0032 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8147B1F1EF980005B0032 /* RegisterViewController.swift */; };
 		35EB48CB1F1DEB390061AA52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */; };
+		35EC657E1F21A3B7009B5302 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC657D1F21A3B7009B5302 /* ListTableViewCell.swift */; };
+		35EC65801F21AD2F009B5302 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC657F1F21AD2F009B5302 /* ListTableViewController.swift */; };
 		35EEAB4C1F1F628700C4DD3D /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EEAB4B1F1F628700C4DD3D /* Device.swift */; };
 		35F3CE781F1DBE220039AD37 /* LinhomesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */; };
 		35FA45EE1F161D710019A7E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA45ED1F161D710019A7E4 /* HomeViewController.swift */; };
@@ -25,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		3502EB211F1C99EC00CAFF15 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		3502EB231F1CC2F900CAFF15 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		353005571F1DFDA5008FC52D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3542F4731F15DAD30029068D /* linhomes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linhomes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3542F4761F15DAD30029068D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		3597B6B41F1DBB1D006EF8F1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		35A8147B1F1EF980005B0032 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35EC657D1F21A3B7009B5302 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		35EC657F1F21AD2F009B5302 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		35EEAB4B1F1F628700C4DD3D /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinhomesDB.swift; sourceTree = "<group>"; };
 		35FA45ED1F161D710019A7E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -78,19 +80,20 @@
 			isa = PBXGroup;
 			children = (
 				353005571F1DFDA5008FC52D /* GoogleService-Info.plist */,
-				35FA45ED1F161D710019A7E4 /* HomeViewController.swift */,
-				3502EB211F1C99EC00CAFF15 /* ScanViewController.swift */,
+				3542F4821F15DAD30029068D /* Info.plist */,
 				3542F47D1F15DAD30029068D /* Assets.xcassets */,
 				3542F47A1F15DAD30029068D /* Main.storyboard */,
 				3542F47F1F15DAD30029068D /* LaunchScreen.storyboard */,
+				35FA45ED1F161D710019A7E4 /* HomeViewController.swift */,
+				3502EB211F1C99EC00CAFF15 /* ScanViewController.swift */,
 				3542F4761F15DAD30029068D /* AppDelegate.swift */,
-				3542F4821F15DAD30029068D /* Info.plist */,
-				3502EB231F1CC2F900CAFF15 /* ListViewController.swift */,
-				3597B6B41F1DBB1D006EF8F1 /* User.swift */,
-				35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */,
 				35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */,
 				35A8147B1F1EF980005B0032 /* RegisterViewController.swift */,
+				3597B6B41F1DBB1D006EF8F1 /* User.swift */,
 				35EEAB4B1F1F628700C4DD3D /* Device.swift */,
+				35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */,
+				35EC657D1F21A3B7009B5302 /* ListTableViewCell.swift */,
+				35EC657F1F21AD2F009B5302 /* ListTableViewController.swift */,
 			);
 			path = linhomes;
 			sourceTree = "<group>";
@@ -240,12 +243,13 @@
 				35EB48CB1F1DEB390061AA52 /* LoginViewController.swift in Sources */,
 				3542F4771F15DAD30029068D /* AppDelegate.swift in Sources */,
 				35FA45EE1F161D710019A7E4 /* HomeViewController.swift in Sources */,
+				35EC65801F21AD2F009B5302 /* ListTableViewController.swift in Sources */,
 				35EEAB4C1F1F628700C4DD3D /* Device.swift in Sources */,
 				35A8147C1F1EF980005B0032 /* RegisterViewController.swift in Sources */,
 				3597B6B51F1DBB1D006EF8F1 /* User.swift in Sources */,
-				3502EB241F1CC2F900CAFF15 /* ListViewController.swift in Sources */,
 				35F3CE781F1DBE220039AD37 /* LinhomesDB.swift in Sources */,
 				3502EB221F1C99EC00CAFF15 /* ScanViewController.swift in Sources */,
+				35EC657E1F21A3B7009B5302 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
