@@ -661,10 +661,76 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="dBX-hx-0f3" kind="show" identifier="DeviceIdentifier" id="3dI-sr-ZKc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lj0-On-LsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6359.1999999999998" y="687.7061469265368"/>
+        </scene>
+        <!--Device name-->
+        <scene sceneID="E9l-et-TDb">
+            <objects>
+                <viewController storyboardIdentifier="DeviceContainerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="54U-VX-yoO" customClass="DeviceViewController" customModule="linhomes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nyj-bG-wZe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rrj-Gs-NWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f4D-BQ-hfk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-be-S7J">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-Mo-EwL">
+                                        <rect key="frame" x="62" y="128" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="k2O-pj-pz1"/>
+                                            <constraint firstAttribute="height" constant="250" id="oic-GP-85m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.92156862745098034" green="0.9137254901960784" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings32" translatesAutoresizingMaskIntoConstraints="NO" id="jiZ-EU-dkI">
+                                        <rect key="frame" x="171" y="541" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="EBR-UR-2Zn"/>
+                                            <constraint firstAttribute="width" constant="32" id="xYq-Wd-SB8"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.082352941176470587" green="0.074509803921568626" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jiZ-EU-dkI" secondAttribute="bottom" constant="30" id="1BG-cn-3XP"/>
+                                    <constraint firstItem="eGc-Mo-EwL" firstAttribute="top" secondItem="0iP-be-S7J" secondAttribute="top" constant="128" id="1XR-dn-eoC"/>
+                                    <constraint firstItem="jiZ-EU-dkI" firstAttribute="centerX" secondItem="0iP-be-S7J" secondAttribute="centerX" id="2kp-wC-hJQ"/>
+                                    <constraint firstItem="jiZ-EU-dkI" firstAttribute="centerX" secondItem="eGc-Mo-EwL" secondAttribute="centerX" id="Ixx-Qv-P8m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0iP-be-S7J" firstAttribute="leading" secondItem="f4D-BQ-hfk" secondAttribute="leading" id="6wZ-o1-UND"/>
+                            <constraint firstItem="0iP-be-S7J" firstAttribute="top" secondItem="nyj-bG-wZe" secondAttribute="bottom" id="EaG-Bq-rQR"/>
+                            <constraint firstAttribute="trailing" secondItem="0iP-be-S7J" secondAttribute="trailing" id="HS9-ys-Xf4"/>
+                            <constraint firstItem="Rrj-Gs-NWj" firstAttribute="top" secondItem="0iP-be-S7J" secondAttribute="bottom" id="hZa-2C-Vuc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Device name" id="gB0-zD-DAQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gVz-oe-GWs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="pIG-bE-Ylp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="uiButtonControl" destination="eGc-Mo-EwL" id="AAR-x7-3b9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3q-gg-RFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8344.7999999999993" y="687.7061469265368"/>
         </scene>
         <!--Item-->
         <scene sceneID="4Qr-MM-NuL">
@@ -721,6 +787,24 @@
             </objects>
             <point key="canvasLocation" x="5420" y="687.7061469265368"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L9y-Q9-SZc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dBX-hx-0f3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SRt-6I-lz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="54U-VX-yoO" kind="relationship" relationship="rootViewController" id="cuZ-9Z-NG7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pov-5v-RwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7405.6000000000004" y="687.7061469265368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cctv64" width="64" height="64"/>
@@ -733,6 +817,7 @@
         <image name="plug64" width="64" height="64"/>
         <image name="plus32" width="32" height="32"/>
         <image name="right24" width="24" height="24"/>
+        <image name="settings32" width="32" height="32"/>
         <image name="settings64" width="64" height="64"/>
         <image name="thermometer64" width="64" height="64"/>
         <image name="wateringcan64" width="64" height="64"/>

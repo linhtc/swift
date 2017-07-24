@@ -15,6 +15,7 @@
 		3542F4811F15DAD30029068D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3542F47F1F15DAD30029068D /* LaunchScreen.storyboard */; };
 		3597B6B51F1DBB1D006EF8F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597B6B41F1DBB1D006EF8F1 /* User.swift */; };
 		35A8147C1F1EF980005B0032 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8147B1F1EF980005B0032 /* RegisterViewController.swift */; };
+		35C9D5221F25997F00FAD87F /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C9D5211F25997F00FAD87F /* DeviceViewController.swift */; };
 		35EB48CB1F1DEB390061AA52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */; };
 		35EC657E1F21A3B7009B5302 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC657D1F21A3B7009B5302 /* ListTableViewCell.swift */; };
 		35EC65801F21AD2F009B5302 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC657F1F21AD2F009B5302 /* ListTableViewController.swift */; };
@@ -35,6 +36,7 @@
 		3542F4821F15DAD30029068D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3597B6B41F1DBB1D006EF8F1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		35A8147B1F1EF980005B0032 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		35C9D5211F25997F00FAD87F /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		35EB48CA1F1DEB390061AA52 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35EC657D1F21A3B7009B5302 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		35EC657F1F21AD2F009B5302 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				35F3CE771F1DBE220039AD37 /* LinhomesDB.swift */,
 				35EC657D1F21A3B7009B5302 /* ListTableViewCell.swift */,
 				35EC657F1F21AD2F009B5302 /* ListTableViewController.swift */,
+				35C9D5211F25997F00FAD87F /* DeviceViewController.swift */,
 			);
 			path = linhomes;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C9D5221F25997F00FAD87F /* DeviceViewController.swift in Sources */,
 				35EB48CB1F1DEB390061AA52 /* LoginViewController.swift in Sources */,
 				3542F4771F15DAD30029068D /* AppDelegate.swift in Sources */,
 				35FA45EE1F161D710019A7E4 /* HomeViewController.swift in Sources */,

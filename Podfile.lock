@@ -27,10 +27,12 @@ PODS:
   - SQLite.swift (0.11.3):
     - SQLite.swift/standard (= 0.11.3)
   - SQLite.swift/standard (0.11.3)
+  - Starscream (2.0.4)
 
 DEPENDENCIES:
   - Firebase/Database
   - SQLite.swift (~> 0.11.3)
+  - Starscream (~> 2.0.3)
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -41,7 +43,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
+  Starscream: df5974ee928b157c8eda8af8de7c620276b7dfcc
 
-PODFILE CHECKSUM: cc616d31b560be760a15b48af6ff60a8621530a0
+PODFILE CHECKSUM: 44d5054bff970d0e4ebe48ca66a649bbe8e021c3
 
 COCOAPODS: 1.2.1

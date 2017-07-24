@@ -49,7 +49,6 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
-        
         // create event listenner for all services
         let tapSecurity = UITapGestureRecognizer(target: self, action: #selector(handleTapServices))
         let tapWeather = UITapGestureRecognizer(target: self, action: #selector(handleTapServices))

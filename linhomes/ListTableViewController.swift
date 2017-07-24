@@ -66,6 +66,11 @@ class ListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let device = devices[indexPath.row]
         print("Item \(device.name) selected")
+        print("Navigation to Device")
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "DeviceContainerID") as! DeviceViewController
+        VC1.id = device.id // id is device name - mac address
+        let navController = UINavigationController(rootViewController: VC1)
+        self.present(navController, animated:true, completion: nil)
     }
 
     // MARK: - Navigation
@@ -77,6 +82,7 @@ class ListTableViewController: UITableViewController {
     @IBAction func scan(_ sender: UIBarButtonItem) {
         print("Navigation to Scan")
         let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "ScanningContainerID") as! ScanViewController
+        VC1.testParam = "Hi Scanning ctr"
         let navController = UINavigationController(rootViewController: VC1)
         self.present(navController, animated:true, completion: nil)
     }
